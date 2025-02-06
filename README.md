@@ -182,5 +182,44 @@ it will not give same value for variable.each objects must assign its own value
         }
     }
 
+##Setter Injection
+
+we can assign value when the object create for private varibale
+
+    private int codeLine;
+
+    public int getCodeLine() {
+        return this.codeLine;
+    }
+
+    public void setCodeLine(int codeLine) { 
+        this.codeLine = codeLine;
+    }
+
+now in spring.xml file we can configure both.
+    1.for variable
+    2.when the class refer with another class object
+
+1.for variable
+    
+in xml configuration we have bean and in bean we have property field
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="alien" class="org.example.Alien">
+        <property name="codeLine" value="21">
+
+        </property>
+    </bean>
+
+    </beans>
+
+in property field it has name attribute and value attribute
+
+---so simply you can add variable name for the name field and value for the value field..    
+
 
     
