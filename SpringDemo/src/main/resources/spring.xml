@@ -7,6 +7,13 @@
         <property name="codeLine" value="21">
 
         </property>
+        <property name="laptop" ref="lap">
+
+        </property>
+    </bean>
+
+    <bean id="lap" class="org.example.Laptop">
+
     </bean>
 
 </beans>

@@ -197,7 +197,7 @@ we can assign value when the object create for private varibale
     }
 
 now in spring.xml file we can configure both.
-    1.for variable
+    1.for variable (primitive variable)
     2.when the class refer with another class object
 
 1.for variable
@@ -221,5 +221,38 @@ in property field it has name attribute and value attribute
 
 ---so simply you can add variable name for the name field and value for the value field..    
 
+2.Ref attribute for object reference for the Alien Class
 
+    for that first we need to create a varibale which type of laptop class
+
+    private Laptop laptop;
+
+    getters and setters..
     
+spring.xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="alien" class="org.example.Alien">
+        <property name="codeLine" value="21">
+
+        </property>
+        <property name="laptop" ref="lap">
+
+        </property>
+    </bean>
+
+    <bean id="lap" class="org.example.Laptop">
+
+    </bean>
+
+    </beans>
+
+create a bean for Laptop class then use its id for Alien class bean property field named 
+    
+    ref=""
+
+
