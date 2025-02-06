@@ -58,7 +58,7 @@ then Main Class you can add ApplicationContext to create a container to objects 
     public class App {
         public static void main(String[] args) { 
             
-            ApplicationContext context = new ClassPathXmlApplicationContext(""); // in here it will create the objects which have configure in xml
+            ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml"); // in here it will create the objects which have configure in xml
             // when you have correctly add spring context dependency it automatically import the ApplicationContext
             
             Alien obj = context.getBean("alien",Alien.Class);
@@ -123,7 +123,7 @@ spring.xml
     public class App {
         public static void main(String[] args) { 
             
-            ApplicationContext context = new ClassPathXmlApplicationContext(""); // in here it will create the objects which have configure in xml
+            ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml"); // in here it will create the objects which have configure in xml
             // when you have correctly add spring context dependency it automatically import the ApplicationContext
             
             Alien obj = context.getBean("alien",Alien.Class);
@@ -166,7 +166,7 @@ it will not give same value for variable.each objects must assign its own value
     public class App {
         public static void main(String[] args) { 
             
-            ApplicationContext context = new ClassPathXmlApplicationContext(""); // in here it will create the objects which have configure in xml
+            ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml"); // in here it will create the objects which have configure in xml
             // when you have correctly add spring context dependency it automatically import the ApplicationContext
             
             Alien obj = context.getBean("alien",Alien.Class);
